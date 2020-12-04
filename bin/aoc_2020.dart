@@ -13,9 +13,10 @@ void main(List<String> arguments) async {
   //print(input);
   days = getDays();
   for (int i = 0; i < days.length; i++) {
-    await printDay(days[i]);
+    //await printDay(days[i]);
   }
   //printDay(days[dayNumber - 1]);
+  days[dayNumber - 1].solvePartOne(input);
 }
 
 Future<void> printDay(Day day) async {
