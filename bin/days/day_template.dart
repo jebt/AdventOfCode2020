@@ -3,10 +3,11 @@ import 'dart:convert';
 import '../day.dart';
 
 class Template00 implements Day {
+  //todo: change class name
   List<String> lines;
 
   @override
-  int dayNumber;
+  int dayNumber = 0; //todo: set day number
 
   @override
   String solvePartOne(String input) {

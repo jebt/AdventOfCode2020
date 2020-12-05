@@ -3,7 +3,7 @@ import 'dart:io';
 import 'day.dart';
 import 'days_initializer.dart';
 
-const int dayNumber = 4;
+const int dayNumber = 5;
 
 String input;
 List<Day> days;
@@ -15,8 +15,8 @@ void main(List<String> arguments) async {
   for (int i = 0; i < days.length; i++) {
     //await printDay(days[i]);
   }
-  //printDay(days[dayNumber - 1]);
-  days[dayNumber - 1].solvePartOne(input);
+  printDay(days[dayNumber - 1]);
+  //days[dayNumber - 1].solvePartOne(input);
 }
 
 Future<void> printDay(Day day) async {

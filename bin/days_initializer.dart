@@ -4,6 +4,7 @@ import 'days/day_01.dart';
 import 'days/day_02.dart';
 import 'days/day_03.dart';
 import 'days/day_04.dart';
+import 'days/day_05.dart';
 
 List<Day> getDays() {
   List<Day> days = <Day>[];
@@ -11,5 +12,6 @@ List<Day> getDays() {
   days.add(Day02());
   days.add(Day03());
   days.add(Day04());
+  days.add(Day05());
   return days;
 }
