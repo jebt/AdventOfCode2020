@@ -3,6 +3,7 @@ import 'dart:convert';
 import '../day.dart';
 
 class Day04 implements Day {
+  String partTwoAnswer;
   List<String> lines;
 
   @override
@@ -11,6 +12,7 @@ class Day04 implements Day {
   @override
   String solvePartOne(String input) {
     String partOneAnswer = 'partOneAnswerPlaceHolder';
+    partTwoAnswer = 'partTwoAnswerPlaceHolder';
 
     LineSplitter ls = LineSplitter();
     lines = ls.convert(input);
@@ -20,7 +22,8 @@ class Day04 implements Day {
 
     List<String> passports = input.split('\n\n');
 
-    int validCount = 0;
+    int validCountPartOne = 0;
+    int validCountPartTwo = 0;
     for (int i = 0; i < passports.length; i++) {
       String passport = passports[i];
       if (passport.contains('byr') &&
@@ -30,6 +33,7 @@ class Day04 implements Day {
           passport.contains('hcl') &&
           passport.contains('ecl') &&
           passport.contains('pid')) {
+        validCountPartOne++;
         if (checkByr(passport) &&
             checkIyr(passport) &&
             checkEyr(passport) &&
@@ -37,14 +41,15 @@ class Day04 implements Day {
             checkHcl(passport) &&
             checkEcl(passport) &&
             checkPid(passport)) {
-          validCount++;
+          validCountPartTwo++;
         }
       }
     }
 
-    print(validCount);
+    //print(validCountPartOne);
 
-    partOneAnswer = validCount.toString();
+    partOneAnswer = validCountPartOne.toString();
+    partTwoAnswer = validCountPartTwo.toString();
     return partOneAnswer;
   }
 
@@ -148,7 +153,7 @@ class Day04 implements Day {
 
   @override
   String solvePartTwo(String input) {
-    String partTwoAnswer = 'partTwoAnswerPlaceHolder';
+    //String partTwoAnswer = 'partTwoAnswerPlaceHolder';
 
     for (int i = 0; i < lines.length; i++) {
       //String line = lines[i];

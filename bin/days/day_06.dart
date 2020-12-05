@@ -2,14 +2,13 @@ import 'dart:convert';
 
 import '../day.dart';
 
-class Template00 implements Day {
-  //todo: change class name
+class Day06 implements Day {
   List<String> lines;
   String partOneAnswer;
   String partTwoAnswer;
 
   @override
-  int dayNumber = 0; //todo: set day number
+  int dayNumber = 6;
 
   @override
   String solvePartOne(String input) {
@@ -19,7 +18,8 @@ class Template00 implements Day {
     lines = ls.convert(input);
 
     for (int i = 0; i < lines.length; i++) {
-      //String line = lines[i];
+      // String line = lines[i];
+      // print(line);
     }
 
     return partOneAnswer;
@@ -30,7 +30,6 @@ class Template00 implements Day {
     for (int i = 0; i < lines.length; i++) {
       //String line = lines[i];
     }
-
     return partTwoAnswer;
   }
 
