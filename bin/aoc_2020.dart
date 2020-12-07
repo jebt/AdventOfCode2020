@@ -1,14 +1,19 @@
 import 'dart:io';
 
+import 'package:ansicolor/ansicolor.dart';
+
 import 'day.dart';
 import 'days_initializer.dart';
 
-const int dayNumber = 6;
+const int dayNumber = 7;
 
 String input;
 List<Day> days;
+AnsiPen pen;
 
 void main(List<String> arguments) async {
+  ansiColorDisabled = false;
+  pen = AnsiPen()..green(bold: true);
   input = await getInput(dayNumber);
   //print(input);
   days = getDays();
@@ -22,7 +27,7 @@ void main(List<String> arguments) async {
 Future<void> printDay(Day day) async {
   String input = await getInput(day.dayNumber);
   print('day ${day.dayNumber}:');
-  print('answer to part one: ${day.solvePartOne(input)}');
+  print('${pen('answer to part one: ')}${'${day.solvePartOne(input)}'}');
   print('answer to part two: ${day.solvePartTwo(input)}');
   print('');
 }

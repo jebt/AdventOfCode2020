@@ -23,7 +23,6 @@ class Day01 implements Day {
         }
       }
     }
-
     return answer;
   }
 
