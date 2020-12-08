@@ -1,19 +1,15 @@
-import 'dart:convert';
-
 import '../day.dart';
 
 class Day03 extends Day {
+  String input;
   List<String> lines;
 
   @override
   int dayNumber = 3;
 
   @override
-  String solvePartOne(String input) {
+  String solvePartOne() {
     //print(input);
-
-    LineSplitter ls = LineSplitter();
-    lines = ls.convert(input);
 
     int x = 0;
     int trees = 0;
@@ -32,7 +28,7 @@ class Day03 extends Day {
   }
 
   @override
-  String solvePartTwo(String input) {
+  String solvePartTwo() {
     // 189371544 was too low
 
     int answer =
@@ -61,5 +57,10 @@ class Day03 extends Day {
   @override
   void setLines(List<String> lines) {
     this.lines = lines;
+  }
+
+  @override
+  void setInput(String input) {
+    this.input = input;
   }
 }

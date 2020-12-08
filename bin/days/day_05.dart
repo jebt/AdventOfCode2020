@@ -1,18 +1,15 @@
-import 'dart:convert';
-
 import '../day.dart';
 
 class Day05 implements Day {
+  String input;
   List<String> lines;
 
   @override
   int dayNumber = 5;
 
   @override
-  String solvePartOne(String input) {
+  String solvePartOne() {
     String partOneAnswer = 'partOneAnswerPlaceHolder';
-    LineSplitter ls = LineSplitter();
-    lines = ls.convert(input);
 
     int highestSeatId = 0;
     for (int i = 0; i < lines.length; i++) {
@@ -54,7 +51,7 @@ class Day05 implements Day {
   }
 
   @override
-  String solvePartTwo(String input) {
+  String solvePartTwo() {
     String partTwoAnswer = 'partTwoAnswerPlaceHolder';
 
     List<bool> seats = List<bool>(1024);
@@ -110,5 +107,10 @@ class Day05 implements Day {
   @override
   void setLines(List<String> lines) {
     this.lines = lines;
+  }
+
+  @override
+  void setInput(String input) {
+    this.input = input;
   }
 }

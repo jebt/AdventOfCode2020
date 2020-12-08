@@ -1,9 +1,9 @@
-import 'dart:convert';
 import 'package:directed_graph/directed_graph.dart';
 
 import '../day.dart';
 
 class Day07 implements Day {
+  String input;
   List<String> lines;
   DirectedGraph<String> graph;
   Vertex<String> shinyGoldVertex;
@@ -15,11 +15,9 @@ class Day07 implements Day {
   int dayNumber = 7;
 
   @override
-  String solvePartOne(String input) {
+  String solvePartOne() {
     partOneAnswer = 'partOneAnswerPlaceHolder';
     partTwoAnswer = 'partTwoAnswerPlaceHolder';
-    LineSplitter ls = LineSplitter();
-    lines = ls.convert(input);
 
     Map<String, List<String>> graphData = {};
     for (int i = 0; i < lines.length; i++) {
@@ -68,7 +66,7 @@ class Day07 implements Day {
   }
 
   @override
-  String solvePartTwo(String input) {
+  String solvePartTwo() {
     //print(graph.displayStructure);
     //print(graph.edges(shinyGoldVertex));
 
@@ -90,5 +88,10 @@ class Day07 implements Day {
   @override
   void setLines(List<String> lines) {
     this.lines = lines;
+  }
+
+  @override
+  void setInput(String input) {
+    this.input = input;
   }
 }

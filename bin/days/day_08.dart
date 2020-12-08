@@ -1,8 +1,7 @@
-import 'dart:convert';
-
 import '../day.dart';
 
 class Day08 implements Day {
+  String input;
   List<String> lines;
   String partOneAnswer;
   String partTwoAnswer;
@@ -12,12 +11,11 @@ class Day08 implements Day {
   int dayNumber = 8;
 
   @override
-  String solvePartOne(String input) {
+  String solvePartOne() {
     partOneAnswer = 'partOneAnswerPlaceHolder';
     partTwoAnswer = 'partTwoAnswerPlaceHolder';
-    LineSplitter ls = LineSplitter();
-    lines = ls.convert(input);
 
+    accumulator = 0;
     List<bool> visited = [];
     for (int i = 0; i < lines.length; i++) {
       visited.add(false);
@@ -65,7 +63,7 @@ class Day08 implements Day {
   }
 
   @override
-  String solvePartTwo(String input) {
+  String solvePartTwo() {
     bool reachedEnd = false;
     int nopJmpIteration = 0;
     while (!reachedEnd) {
@@ -146,5 +144,10 @@ class Day08 implements Day {
   @override
   void setLines(List<String> lines) {
     this.lines = lines;
+  }
+
+  @override
+  void setInput(String input) {
+    this.input = input;
   }
 }

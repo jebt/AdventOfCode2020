@@ -1,5 +1,3 @@
-import 'dart:convert';
-
 import '../day.dart';
 
 String answer = 'answer_placeholder';
@@ -7,11 +5,10 @@ String answer = 'answer_placeholder';
 class Day01 implements Day {
   @override
   int dayNumber = 1;
+  String input;
   List<String> lines;
 
-  String solvePartOne(String input) {
-    LineSplitter ls = LineSplitter();
-    List<String> lines = ls.convert(input);
+  String solvePartOne() {
     List<int> numbers = <int>[];
     for (int i = 0; i < lines.length; i++) {
       numbers.add(int.parse(lines[i]));
@@ -26,9 +23,7 @@ class Day01 implements Day {
     return answer;
   }
 
-  String solvePartTwo(String input) {
-    LineSplitter ls = LineSplitter();
-    List<String> lines = ls.convert(input);
+  String solvePartTwo() {
     List<int> numbers = <int>[];
     for (int i = 0; i < lines.length; i++) {
       numbers.add(int.parse(lines[i]));
@@ -48,5 +43,10 @@ class Day01 implements Day {
   @override
   void setLines(List<String> lines) {
     this.lines = lines;
+  }
+
+  @override
+  void setInput(String input) {
+    this.input = input;
   }
 }
