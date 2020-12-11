@@ -28,7 +28,7 @@ class Day10 implements Day {
     numbers.sort();
     deviceJolt = numbers.last + 3;
     numbers.add(deviceJolt);
-    print(numbers);
+    //print(numbers);
 
     for (int i = 0; i < numbers.length; i++) {
       if (i == 0) {
@@ -46,7 +46,7 @@ class Day10 implements Day {
 
     partOneAnswer = (oneJoltDiffCount * threeJoltDiffCount).toString();
 
-    print('$oneJoltDiffCount, $twoJoltDiffCount, $threeJoltDiffCount');
+    //print('$oneJoltDiffCount, $twoJoltDiffCount, $threeJoltDiffCount');
     return partOneAnswer;
   }
 
@@ -67,9 +67,8 @@ class Day10 implements Day {
       possTable.add(nextPoss);
     }
 
-    print(possTable);
-
-    print(numbers);
+    //print(possTable);
+    //print(numbers);
 
     int possibilities = 1;
     for (int i = 0; i < numbers.length - 1; i++) {
@@ -77,7 +76,7 @@ class Day10 implements Day {
       while ((numbers[i + streak] + 1) == (numbers[i + streak + 1])) {
         streak++;
       }
-      print(streak);
+      //print(streak);
       possibilities = possibilities * possTable[streak];
 
       i = i + streak;

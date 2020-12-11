@@ -22,6 +22,7 @@ class Day06 implements Day {
     int answerCount = 0;
     int partTwoAnswerCount = 0;
     List<String> reports = input.split('\n\n');
+    reports = reports[0].split('\r\n\r\n');
     for (String report in reports) {
       String allAnsweredYes = '';
       String aggregatedLetters = '';

@@ -17,6 +17,8 @@ class Day04 implements Day {
     // }
 
     List<String> passports = input.split('\n\n');
+    passports = passports[0].split('\r\n\r\n');
+
 
     int validCountPartOne = 0;
     int validCountPartTwo = 0;

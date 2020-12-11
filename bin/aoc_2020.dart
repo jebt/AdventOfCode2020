@@ -3,7 +3,7 @@ import 'package:ansicolor/ansicolor.dart';
 import 'day.dart';
 import 'days_initializer.dart';
 
-const int dayNumber = 10;
+const int dayNumber = 11;
 
 String input;
 List<Day> days;
