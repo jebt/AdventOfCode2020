@@ -294,13 +294,9 @@ class Day11 implements Day {
 
     currentGen = List.from(lines);
 
-    int gen = 0;
     proceedGen();
-    gen++;
     while (!stale()) {
       proceedGen();
-      gen++;
-      //print(gen);
     }
 
     partOneAnswer = countOccupiedSeats(currentGen).toString();
@@ -314,16 +310,10 @@ class Day11 implements Day {
 
     currentGen2 = List.from(lines);
 
-    int gen = 0;
     proceedGen2();
-    print(currentGen2);
-    gen++;
     while (!stale2()) {
       proceedGen2();
-      gen++;
-      print(gen);
     }
-    print(currentGen2);
 
     partTwoAnswer = countOccupiedSeats(currentGen2).toString();
 

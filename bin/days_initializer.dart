@@ -14,6 +14,7 @@ import 'days/day_08.dart';
 import 'days/day_09.dart';
 import 'days/day_10.dart';
 import 'days/day_11.dart';
+import 'days/day_12.dart';
 
 Future<List<Day>> getDays() async {
   List<Day> days = <Day>[];
@@ -28,6 +29,7 @@ Future<List<Day>> getDays() async {
   days.add(Day09());
   days.add(Day10());
   days.add(Day11());
+  days.add(Day12());
 
   for (Day day in days) {
     String input = await getInput(day.dayNumber);
