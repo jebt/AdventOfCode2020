@@ -3,7 +3,7 @@ import 'package:ansicolor/ansicolor.dart';
 import 'day.dart';
 import 'days_initializer.dart';
 
-const int dayNumber = 12;
+const int dayNumber = 4;
 
 String input;
 List<Day> days;
@@ -21,6 +21,7 @@ void main(List<String> arguments) async {
   //print(input);
   //days[dayNumber - 1].solvePartOne();
   printDay(days[dayNumber - 1]);
+  //print(days[dayNumber - 1].solvePartTwo());
 }
 
 Future<void> printDay(Day day) async {

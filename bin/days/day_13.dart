@@ -1,13 +1,13 @@
 import '../day.dart';
 
-class Template00 implements Day {  // todo: change class name
-  @override
-  int dayNumber = 0;  // todo: set day number
-
+class Day13 implements Day {
   String input;
   List<String> lines;
   String partOneAnswer = 'partOneAnswerPlaceHolder';
   String partTwoAnswer = 'partTwoAnswerPlaceHolder';
+
+  @override
+  int dayNumber = 13;
 
   @override
   String solvePartOne() {

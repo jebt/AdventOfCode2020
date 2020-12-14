@@ -1,24 +1,21 @@
 import '../day.dart';
+import '../utils.dart';
 
 class Day04 implements Day {
-  String partTwoAnswer;
-  String input;
-  List<String> lines;
-
   @override
   int dayNumber = 4;
 
+  String input;
+  List<String> lines;
+  String partOneAnswer = 'partOneAnswerPlaceHolder';
+  String partTwoAnswer = 'partTwoAnswerPlaceHolder';
+
   @override
   String solvePartOne() {
-    String partOneAnswer = 'partOneAnswerPlaceHolder';
-    partTwoAnswer = 'partTwoAnswerPlaceHolder';
-    // for (int i = 0; i < lines.length; i++) {
-    // String line = lines[i];
-    // }
-
-    List<String> passports = input.split('\n\n');
-    passports = passports[0].split('\r\n\r\n');
-
+    //List<String> passports = input.split('\n\n');
+    //passports = passports[0].split('\r\n\r\n');
+    //List<String> passports = input.split('\r\n\r\n');
+    List<String> passports = splitOnWhiteLine(input);
 
     int validCountPartOne = 0;
     int validCountPartTwo = 0;
@@ -151,12 +148,6 @@ class Day04 implements Day {
 
   @override
   String solvePartTwo() {
-    //String partTwoAnswer = 'partTwoAnswerPlaceHolder';
-
-    for (int i = 0; i < lines.length; i++) {
-      //String line = lines[i];
-    }
-
     return partTwoAnswer;
   }
 
