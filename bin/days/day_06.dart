@@ -21,8 +21,12 @@ class Day06 implements Day {
 
     int answerCount = 0;
     int partTwoAnswerCount = 0;
-    List<String> reports = input.split('\n\n');
-    reports = reports[0].split('\r\n\r\n');
+
+    List<String> reports = input.split('\n\n'); //todo: find a platform agnostic way to do this
+    //reports = reports[0].split('\r\n\r\n');
+    //List<String> reports = input.split('\r\n\r\n');
+    //List<String> reports = splitOnWhiteLine(input);
+
     for (String report in reports) {
       String allAnsweredYes = '';
       String aggregatedLetters = '';

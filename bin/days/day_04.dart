@@ -1,5 +1,5 @@
 import '../day.dart';
-import '../utils.dart';
+//import '../utils.dart';
 
 class Day04 implements Day {
   @override
@@ -12,10 +12,11 @@ class Day04 implements Day {
 
   @override
   String solvePartOne() {
-    //List<String> passports = input.split('\n\n');
+    List<String> passports =
+        input.split('\n\n'); //todo: find a platform agnostic way to do this
     //passports = passports[0].split('\r\n\r\n');
     //List<String> passports = input.split('\r\n\r\n');
-    List<String> passports = splitOnWhiteLine(input);
+    //List<String> passports = splitOnWhiteLine(input);
 
     int validCountPartOne = 0;
     int validCountPartTwo = 0;
@@ -119,7 +120,13 @@ class Day04 implements Day {
   bool checkEcl(String passport) {
     bool check = false;
     String ecl = extract(passport, 'ecl');
-    if (ecl == 'amb' || ecl == 'blu' || ecl == 'brn' || ecl == 'gry' || ecl == 'grn' || ecl == 'hzl' || ecl == 'oth') {
+    if (ecl == 'amb' ||
+        ecl == 'blu' ||
+        ecl == 'brn' ||
+        ecl == 'gry' ||
+        ecl == 'grn' ||
+        ecl == 'hzl' ||
+        ecl == 'oth') {
       check = true;
     }
     return check;
