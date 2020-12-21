@@ -12,6 +12,7 @@ dependencies:
   effective_dart: ^1.3.0
   ansicolor: ^1.1.1
   directed_graph: ^0.2.3
+  binary: ^2.0.0
 
 
 dev_dependencies:
